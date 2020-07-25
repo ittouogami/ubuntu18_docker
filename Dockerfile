@@ -6,12 +6,44 @@ RUN \
   apt-get update && \
   apt-get upgrade -y && \
   apt-get -y --no-install-recommends install \
-    apt-utils debconf ca-certificates curl sudo xorg dbus dbus-x11 ubuntu-gnome-default-settings \
-    gtk2-engines gosu ttf-ubuntu-font-family fonts-ubuntu-font-family-console \
-    fonts-droid-fallback lxappearance nautilus vim gnome-terminal \
-    canberra-gtk* language-pack-ja tzdata iputils-ping net-tools \
-    ncurses-dev build-essential autoconf automake gawk make \
-    libpython-dev libpython3-dev python-dev python3-dev tcl tcl-dev git && \
+    apt-utils \
+    debconf \
+    ca-certificates \
+    curl \
+    sudo \
+    xorg \
+    dbus \
+    dbus-x11 \
+    ubuntu-gnome-default-settings \
+    gtk2-engines \
+    gosu \
+    ttf-ubuntu-font-family \
+    fonts-ubuntu-font-family-console \
+    fonts-droid-fallback \
+    lxappearance \
+    nautilus \
+    vim \
+    gnome-terminal \
+    canberra-gtk* \
+    language-pack-ja \
+    tzdata \
+    iputils-ping \
+    net-tools \
+    ncurses-dev \
+    build-essential \
+    autoconf \
+    automake \
+    gawk \
+    make \
+    libpython-dev \
+    libpython3-dev \
+    python-dev \
+    python3-dev \
+    tcl \
+    tcl-dev \
+    less \
+    unzip \
+    git && \
   apt-get autoclean && \
   apt-get autoremove && \
   rm /etc/localtime && \
