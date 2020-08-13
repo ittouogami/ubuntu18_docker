@@ -10,4 +10,4 @@ docker run -ti --rm \
     -v $HOME/.Xauthority:$HOME/.Xauthority \
     -v $HOME/docker/userhome:$HOME \
     -w $HOME \
-    ubuntu18 /bin/bash
+    ubuntu18
