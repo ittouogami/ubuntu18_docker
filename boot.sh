@@ -10,4 +10,5 @@ docker run -ti --rm \
     -v $HOME/.Xauthority:$HOME/.Xauthority \
     -v $HOME/docker/userhome:$HOME \
     -w $HOME \
+    --shm-size=256m \
     ubuntu18

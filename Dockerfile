@@ -45,11 +45,15 @@ RUN \
     unzip \
     dialog \
     firefox \
+    apt-transport-https \
+    gpg \
     git && \
 # for VSCode
-    curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg && \
-    sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/ && \
-    sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list' && \
+  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg && \
+  sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/ && \
+  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list' && \
+  apt-get update && \
+  apt-get -y --no-install-recommends install code && \
   apt-get autoclean && \
   apt-get autoremove && \
   rm /etc/localtime && \
