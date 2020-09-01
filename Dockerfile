@@ -43,6 +43,8 @@ RUN \
     tcl-dev \
     less \
     unzip \
+    dialog \
+    firefox \
     git && \
   apt-get autoclean && \
   apt-get autoremove && \
